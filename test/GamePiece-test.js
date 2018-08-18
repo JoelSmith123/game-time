@@ -10,7 +10,7 @@ describe('GamePiece', () => {
 
 
 
-  it('should take properties', () => {
+  it.skip('should take properties', () => {
     gamepiece = new GamePiece(30, 30, 10, 10, 'green')
     assert.deepEqual(gamepiece, {
       x: 30,
@@ -25,7 +25,7 @@ describe('GamePiece', () => {
     })
   });
 
-  it('should collide with a second gamepiece that occupies the same space', () => {
+  it.skip('should collide with a second gamepiece that occupies the same space', () => {
     gamepiece = new GamePiece(30, 30, 10, 10, 'green')
     const gamepiece2 = new GamePiece(30, 30, 10, 10, 'green')
     const gamepiece3 = new GamePiece(130, 130, 10, 10, 'green')

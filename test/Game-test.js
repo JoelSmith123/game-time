@@ -10,24 +10,24 @@ const ctx = {
 }
 
 describe('Game', () => {
-  it.skip('should end the game if block collides with wall', () => {
+  it('should end the game if block collides with wall', () => {
     //Setup
     const game = new Game(ctx);
-    const block = game.blocks[0];
-    block.x = ctx.canvas.width;
-
+    const player = game.players[0];
+    player.x = ctx.canvas.width;
+    player.isCollidingWithWall( ctx.canvas.width, ctx.canvas.height)
     //Execution
-    game.handleBlock(block);
+    game.handleplayer(player);
 
     //Assertion
     assert.isTrue(game.gameOver);
   })
 
-  it('should take properties', () => {})
+  it.skip('should take properties', () => {})
 
   it.skip('should collide with walls', () => {})
 
-  it('should be able to move', () => {
+  it.skip('should be able to move', () => {
     //Setup
     const game = new Game(ctx);
     const block = game.blocks[0];
