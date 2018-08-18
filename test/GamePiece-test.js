@@ -22,7 +22,6 @@ describe('GamePiece', () => {
       dy: 1,
       dxv: 1,
       dyv: 1
-
     })
   });
 

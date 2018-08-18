@@ -14,7 +14,6 @@ describe('Game', () => {
     //Setup
     const game = new Game(ctx);
     const block = game.blocks[0];
-
     block.x = ctx.canvas.width;
 
     //Execution
@@ -32,9 +31,6 @@ describe('Game', () => {
     //Setup
     const game = new Game(ctx);
     const block = game.blocks[0];
-
-    // let x = GamePiece.x;
-    // console.log(game.block.GamePiece.x);
 
     //Execution
     block.move();
