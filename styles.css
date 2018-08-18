@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+
+.players-won {
+  display: block;
+  text-align: center;
+}
+
+.player1-won {
+  display: inline-block;
+}
+
+.player2-won {
+  display: inline-block;
+}
+
+.players-scores {
+  display: block;
+  text-align: center;
+}
+
+.player1-score {
+  display: inline-block;
+  padding-right: 100px;
+}
+
+.player2-score {
+  display: inline-block;
+  padding-left: 100px;
+}
