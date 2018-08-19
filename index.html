@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <title>Game Time</title>
   <link href='./game.css' rel='stylesheet' type='text/css'/>
-  <link href='styles.css' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 </head>
 <body>
-  <h1 class='game-over'>GAME OVER</h1>
-  <div class='players-won'>
-    <h2 class='player1-won'>Player 1 won!</h2>
+  <h1 class='title'>TRON</h1>
+  <div class='players-won hide'>
+    <h2 class='player1-won'></h2>
     <h2 class='player2-won'>Player 2 won!</h2>
   </div>
-  <div class='players-scores'>
+  <canvas id="game" width="1300" height="600"></canvas>
+  <div class='scores-won-status'>
     <h1 class='player1-score'>0</h1>
+    <h1 class='game-over'>GAME OVER</h1>
     <h1 class='player2-score'>0</h1>
   </div>
-  <canvas id="game" width="600" height="600"></canvas>
   <button class="new-game-btn">New Game</button>
   <button class='new-round-btn'>New Round</button>
   <script src="main.bundle.js"></script>
