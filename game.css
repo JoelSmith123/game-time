@@ -1,5 +1,62 @@
+* {
+  background-color: #171717;
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 3px;
+}
+
+.hide {
+  display: none;
+}
+
 #game {
-  border: 1px dashed;
+  background-color: #262626;
+  border: 4px solid #b32983;
   margin: auto;
   display: block;
+}
+
+.title {
+  text-align: center;
+}
+
+.game-over {
+  display: inline-block;
+  text-align: center;
+}
+
+.players-won {
+  display: block;
+  text-align: center;
+}
+
+.player1-won {
+  display: inline-block;
+}
+
+.player2-won {
+  display: inline-block;
+}
+
+.scores-won-status {
+  display: block;
+  text-align: center;
+}
+
+.player1-score {
+  display: inline-block;
+  padding-right: 100px;
+}
+
+.player2-score {
+  display: inline-block;
+  padding-left: 100px;
+}
+
+.new-game-btn {
+
+}
+
+.new-round-btn {
+  
 }
