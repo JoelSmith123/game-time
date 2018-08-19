@@ -10,7 +10,7 @@ const ctx = {
 }
 
 describe('Game', () => {
-  it('should end the game if block collides with wall', () => {
+  it.skip('should end the game if block collides with wall', () => {
     //Setup
     const game = new Game(ctx);
     const player = game.players[0];
@@ -23,22 +23,54 @@ describe('Game', () => {
     assert.isTrue(game.gameOver);
   })
 
-  it.skip('should take properties', () => {})
+  it.skip('should take properties', () => {
+    game = new Game(ctx)
+    assert.deepEqual(game, {
+      ctx: ctx,
+      paused: false,
+      gameOver: false,
+      playerOneScore: this.playerOneScore || 0,
+      playerTwoScore: this.playerTwoScore || 0,
+
+      players: [
+        new Player(100, 300, 10, 10, 'red', 1), //Player 1 left
+        new Player(500, 300, 10, 10, 'green', -1), //Player 2 right
+      ],
+
+      trails: [],
+    });
+  });
+  
 
   it.skip('should collide with walls', () => {})
 
-  it.skip('should be able to move', () => {
-    //Setup
+
+// FINISHED 
+  it('should be able to move', () => {
     const game = new Game(ctx);
-    const block = game.blocks[0];
+    const player = game.players[0];
 
-    //Execution
-    block.move();
-    let x = block.x;
-    //Assertion
-    assert.equal(x, 55)
+    player.move();
+    let x = player.x;
+    assert.equal(x, 101)
+  });
+
+
+  it.skip('should be able to changeDirection', () => {
+
+    const game = new Game(ctx);
+    const player = game.players[0];
+    const dx = 0
+
+    player.changeDirection();
+
+    assert.equal(direction.dx, )
+
+
   })
-
-
-  it.skip('should be able to changeDirection', () => {})
 })
+
+
+
+
+
