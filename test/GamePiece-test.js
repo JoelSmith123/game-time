@@ -5,7 +5,7 @@ describe('GamePiece', () => {
   let gamepiece; 
 
   beforeEach(() => {
-    gamepiece = new GamePiece(30, 30, 10, 10, 'green')
+    gamepiece = new GamePiece(100, 100, 10, 10, 'green')
   })
 
 
