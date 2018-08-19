@@ -1,21 +1,19 @@
 const { assert } = require('chai');
-const GamePiece = require('../lib/GamePiece.js')
+const Player = require('../lib/Player.js')
 
-describe('GamePiece', () => {
-  let gamepiece; 
+describe('Player', () => {
+  let player; 
 
   beforeEach(() => {
-    gamepiece = new GamePiece(100, 100, 10, 10, 'green')
-  })
+    player = new Player(100, 100, 10, 10, 'green', 1)
+  });
 
 
   // FINISHED
-  it('should take properties', () => {
-    gamepiece = new GamePiece(30, 30, 10, 10, 'green')
-    
-    assert.deepEqual(gamepiece, {
-      x: 30,
-      y: 30,
+  it('should take properties', () => {    
+    assert.deepEqual(player, {
+      x: 100,
+      y: 100,
       height: 10,
       width: 10,
       color: 'green',
@@ -23,6 +21,7 @@ describe('GamePiece', () => {
       dy: 0,
       dxv: 1,
       dyv: 1
+      lives = 0;
     })
   });
 

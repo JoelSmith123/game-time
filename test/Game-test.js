@@ -23,22 +23,22 @@ describe('Game', () => {
     assert.isTrue(game.gameOver);
   })
 
-  it('should take properties', () => {
-    game = new game(30, 30, 10, 10, 'green')
+  it.skip('should take properties', () => {
+    game = new Game(ctx)
     assert.deepEqual(game, {
-      this.ctx = ctx;
-      this.paused = false;
-      this.gameOver = false;
-      this.playerOneScore = this.playerOneScore || 0;
-      this.playerTwoScore = this.playerTwoScore || 0;
+      ctx: ctx,
+      paused: false,
+      gameOver: false,
+      playerOneScore: this.playerOneScore || 0,
+      playerTwoScore: this.playerTwoScore || 0,
 
-      this.players = [
+      players: [
         new Player(100, 300, 10, 10, 'red', 1), //Player 1 left
         new Player(500, 300, 10, 10, 'green', -1), //Player 2 right
-      ];
+      ],
 
-      this.trails = [];
-    })
+      trails: [],
+    });
   });
   
 
@@ -47,26 +47,24 @@ describe('Game', () => {
 
 // FINISHED 
   it('should be able to move', () => {
-    //Setup
     const game = new Game(ctx);
     const player = game.players[0];
 
-    //Execution
     player.move();
     let x = player.x;
-    //Assertion
     assert.equal(x, 101)
-  })
+  });
 
 
-  it('should be able to changeDirection', () => {
+  it.skip('should be able to changeDirection', () => {
 
     const game = new Game(ctx);
     const player = game.players[0];
+    const dx = 0
 
     player.changeDirection();
 
-    assert.equal(direction.dx, 1)
+    assert.equal(direction.dx, )
 
 
   })
