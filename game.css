@@ -38,6 +38,22 @@
   display: inline-block;
 }
 
+.buttons-container {
+  display: block;
+  margin: 0 auto 20px;
+  width: max-content;
+}
+
+.new-game-btn {
+  /*margin-left: 35%;*/
+  margin-right: 210px;
+}
+
+.new-round-btn {
+   /*margin-right: 35%;*/
+   margin-left: 210px;
+}
+
 .scores-won-status {
   display: block;
   text-align: center;
@@ -51,12 +67,4 @@
 .player2-score {
   display: inline-block;
   padding-left: 100px;
-}
-
-.new-game-btn {
-
-}
-
-.new-round-btn {
-  
 }
