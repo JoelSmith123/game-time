@@ -8,14 +8,11 @@ describe('GamePiece', () => {
     gamepiece = new GamePiece(100, 100, 10, 10, 'green')
   })
 
-
-  // FINISHED
   it('should take properties', () => {
-    gamepiece = new GamePiece(30, 30, 10, 10, 'green')
     
     assert.deepEqual(gamepiece, {
-      x: 30,
-      y: 30,
+      x: 100,
+      y: 100,
       height: 10,
       width: 10,
       color: 'green',
@@ -26,11 +23,24 @@ describe('GamePiece', () => {
     })
   });
 
-  it.skip('should collide with walls', () => {})
-  it.skip('should be able to move', () => {})
-  it.skip('should be able to changeDirection', () => {})
-})
+  it('should collide with walls', () => {
+    gamepiece.x = 800;
 
-// Setup
-// Execution
-// Assertion
+    assert.isTrue(gamepiece.isCollidingWithWall(800, 400));
+  })
+
+  it('should be able to move', () => {
+    gamepiece.move();
+    let x = gamepiece.x;
+
+    assert.equal(x, 101)
+  });
+
+  it('should be able to changeDirection', () => {
+    let startingDirection = gamepiece.dx;
+    gamepiece.changeDirection(gamepiece.dx);
+    let nextDirection = gamepiece.dx;
+
+    assert.isTrue(startingDirection !== nextDirection);
+  })
+})
