@@ -6,8 +6,8 @@ const Player = require('../lib/Player');
 const ctx = {
   canvas: {
     width: 800,
-    height: 400
-  };
+    height: 400,
+  }
 };
 
 describe('Game', () => {
@@ -28,8 +28,8 @@ describe('Game', () => {
       paused: false,
       gameOver: false,
       players: [
-      new Player(100, 300, 10, 10, '#fb983b', 1),
-      new Player(500, 300, 10, 10, '#b6fdf4', -1),
+      new Player(100, 200, 10, 10, '#fb983b', 1),
+      new Player(700, 200, 10, 10, '#b6fdf4', -1),
       ],
       trails: [],
     });
