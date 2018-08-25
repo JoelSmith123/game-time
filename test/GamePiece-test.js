@@ -23,10 +23,22 @@ describe('GamePiece', () => {
     })
   });
 
+  it('should collide with object', () => {
+    assert.isTrue(gamepiece.isCollidingWith(gamepiece));
+  })
+
   it('should collide with walls', () => {
     gamepiece.x = 800;
 
     assert.isTrue(gamepiece.isCollidingWithWall(800, 400));
+  })
+
+  it('should be able to be drawn', () => {
+    let ctx = {};
+    ctx.fillRect = () => {};
+    gamepiece.color = 'blue';
+    gamepiece.draw(ctx);
+    assert.isTrue(ctx.fillStyle == 'blue');
   })
 
   it('should be able to move', () => {

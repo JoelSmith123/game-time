@@ -24,6 +24,14 @@ describe('Player', () => {
     })
   });
 
+  it('should be able to be drawn', () => {
+    let ctx = {};
+    ctx.fillRect = () => {};
+    player.color = 'blue';
+    player.draw(ctx);
+    assert.isTrue(ctx.fillStyle == 'blue');
+  })
+
   it('should be able to move', () => {
     player.move();
     let x = player.x;
@@ -41,7 +49,12 @@ describe('Player', () => {
     let startingDirection = player.dx;
     player.changeDirection(player.dx);
     let nextDirection = player.dx;
-
     assert.isTrue(startingDirection !== nextDirection);
+  })
+
+  it('should be able to die on command', () => {
+    player.lives = 2;
+    player.playerDies();
+    assert.equal(player.lives, 1);
   })
 })
