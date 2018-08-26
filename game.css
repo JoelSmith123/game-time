@@ -10,11 +10,16 @@
  display: none;
 }
 
+.canvas-instructions-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 #game {
  background-color: #262626;
  border: 4px solid #b32983;
  margin: auto;
- display: block;
+ display: inline-block;
 }
 
 .title {
@@ -31,6 +36,39 @@
  margin: 0 auto;
  font-size: 20px;
  padding: 10px;
+}
+
+.player1-instructions {
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.player2-instructions {
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.player1-instructions-text {
+  display: block;
+}
+
+.player2-instructions-text {
+  display: block;
+}
+
+.wasd-keys-img {
+  /*display: block;  */
+  height: auto;
+  width: 250px;
+  padding-top: 20px;
+}
+
+.arrow-keys-img {
+  display: block;
+  height: auto;
+  width: 200px;
 }
 
 .scores-won-status {

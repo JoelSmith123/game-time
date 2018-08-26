@@ -11,18 +11,28 @@
  <div class='buttons-container'>
    <button class='new-game-btn'>START</button>
  </div>
- <canvas id='game' width='800' height='400'></canvas>
- <div class='scores-won-status'>
-   <div class='player-one'>
-     <h3 class='player-one-score-text'>player 1:</h3>
-     <h1 class='player1-score'>3</h1>
-   </div>
-     <h1 class='game-over'></h1>
-   <div class='player-two'>
-     <h3 class='player-two-score-text'>player 2:</h3>
-     <h1 class='player2-score'>3</h1>
-   </div>
+ <section class='canvas-instructions-container'>
+   <div class='player1-instructions'>
+    <p class='player1-instructions-text' >Player 1: Please use the WASD keys to navigate your character on the left side of the game.</p>
+    <img class='wasd-keys-img' src='images/wasd-keys.svg'>
+  </div>
+  <canvas id='game' width='800' height='400'></canvas>
+  <div class='player2-instructions'>
+    <p class='player2-instructions-text' >Player 2: Please use the ARROW keys to navigate your character on the left side of the game.</p>
+    <img class='arrow-keys-img' src='images/arrow-keys.svg'>
+  </div>
+</section>
+<div class='scores-won-status'>
+ <div class='player-one'>
+   <h3 class='player-one-score-text'>player 1:</h3>
+   <h1 class='player1-score'>3</h1>
  </div>
- <script src='main.bundle.js'></script>
+ <h1 class='game-over'></h1>
+ <div class='player-two'>
+   <h3 class='player-two-score-text'>player 2:</h3>
+   <h1 class='player2-score'>3</h1>
+ </div>
+</div>
+<script src='main.bundle.js'></script>
 </body>
 </html>
