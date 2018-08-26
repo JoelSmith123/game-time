@@ -21,7 +21,7 @@ describe('Game', () => {
     assert.isTrue(game.gameOver);
   });
 
-  it('should take properties', () => {
+  it('should start off with properties', () => {
     let game = new Game(ctx)
     assert.deepEqual(game, {
       ctx: ctx,
@@ -34,4 +34,53 @@ describe('Game', () => {
       trails: [],
     });
   });
+
+    it('should animate each player as the game loops', function() {
+    let game = new Game(ctx)
+    ctx.fillRect = () => {};
+
+    game.animate(ctx);
+    assert.equal(game.players[0].x, 101);
+    assert.equal(game.players[1].x, 699);
+  });
+
+  it('should end the game if player collides with other player\'s trail', () => {
+    const game = new Game(ctx);
+    ctx.fillRect = () => {};
+    const player1 = game.players[0];
+    const player2 = game.players[1];
+    player1.x = player2.x;
+    player1.y = player2.y;
+    game.animate()
+    game.collidingWithTrail(player1, player2);
+    
+    assert.isTrue(game.gameOver);
+  });
+
+  it('should be able to end game', () => {
+    const game = new Game(ctx);
+
+    game.endGame();
+
+    assert.isTrue(game.gameOver);
+  })
+
+  it('should be able to increase in speed', () => {
+    const game = new Game(ctx);
+    const player1 = game.players[0];
+    const player2 = game.players[1];
+
+    game.increaseSpeed();
+
+    assert.equal(player1.dxv, 2);
+
+  })
+
+  it('should be able to be over', () => {
+    const game = new Game(ctx);
+    game.endGame();
+    game.isOver();
+
+    assert.isTrue(game.gameOver)
+  })
 })
